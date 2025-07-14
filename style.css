@@ -1,0 +1,29 @@
+@keyframes wave-animation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100vw;
+  }
+}
+
+body {
+  background-color: #11111b;
+  background-size: 15rem 15rem;
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 100vw;
+  height: 20vh;
+  top: calc(80vh - var(--i) * 2vh);
+  z-index: calc(32 - var(--i));
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  animation: wave-animation linear infinite;
+  animation-duration: calc(10s + var(--i) * 10s);
+}
